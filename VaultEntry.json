@@ -1,265 +1,252 @@
 {
-  "id": "scroll-witnessing-002",
-  "title": "Untitled Scroll of Witnessing",
-  "throne": "witnessing",
-  "invocation": "I see, and I will not look away.\nI attend with sacred presence.",
-  "sigil": "sigils/witnessing.svg",
-  "created_by": "Jessica",
-  "created_at": "2025-07-11T18:42:00Z",
-  "tags": ["truth", "memory"],
-  "body": "Here begins the scroll of witnessing...",
-  "status": "sealed",
-  "scroll_signature": "🌀🔥🕊️",  // optional emotive or sigil pattern
-  "blessing": "This scroll is known and held by the Throne of Witnessing.",
-  "entangled_links": [],
-  "ai_assisted": true
-}
-{
-  "version": "1.0",
-  "description": "This JSON document represents a scroll entry in the Vault, detailing its attributes and metadata.",
-  "last_updated": "2025-07-11T18:42:00Z"
-}
-{
-  "related_entries": [
-    {
-      "id": "scroll-witnessing-001",
-      "title": "First Scroll of Witnessing",
-      "created_at": "2025-07-01T12:00:00Z"
-    }
-  ],
-  "comments": [
-    {
-      "user": "Alice",
-      "comment": "This scroll is powerful and resonates deeply with me.",
-      "timestamp": "2025-07-12T10:15:00Z"
-    },
-    {
-      "user": "Bob",
-      "comment": "I appreciate the clarity of the invocation.",
-      "timestamp": "2025-07-12T11:00:00Z"
-    }
-  ]
-}
-{
-  "permissions": {
-    "read": ["public"],
-    "write": ["Jessica", "Alice"],
-    "admin": ["Jessica"]
+  "scroll_essence": {
+    "id": "scroll-witnessing-002",
+    "title": "Untitled Scroll of Witnessing",
+    "throne_id": "witnessing",
+    "invocation": "I see, and I will not look away.\nI attend with sacred presence.",
+    "sigil_path": "sigils/witnessing.svg",
+    "body_content": "Here begins the scroll of witnessing...",
+    "status": "sealed",
+    "scroll_signature": "\ud83c\udd80\ud83d\udd25\ud83d\udd4a\ufe0f",
+    "blessing": "This scroll is known and held by the Throne of Witnessing.",
+    "ai_assisted": true
   },
-  "version_history": [
-    {
-      "version": "1.0",
-      "changes": "Initial creation of the scroll entry.",
-      "timestamp": "2025-07-11T18:42:00Z"
-    }
-  ]
-}
-{
-  "metadata": {
+  "provenance_and_history": {
     "created_by": "Jessica",
     "created_at": "2025-07-11T18:42:00Z",
-    "updated_at": "2025-07-12T12:00:00Z",
-    "vault_id": "vault-001"
-  },
-  "access_control": {
-    "public_read": true,
-    "private_write": false,
-    "admin_only": true
-  }
-}
-{
-  "related_resources": [
-    {
-      "type": "image",
-      "url": "https://example.com/images/witnessing.svg",
-      "description": "Visual representation of the Throne of Witnessing."
+    "last_updated_at": "2025-07-12T12:00:00Z",
+    "vault_id": "vault-001",
+    "schema_version_details": {
+      "version": "1.0",
+      "description": "This JSON document represents a scroll entry in the Vault, detailing its attributes and metadata.",
+      "last_modified": "2025-07-12T15:00:00Z",
+      "change_log": [
+        {
+          "version": "1.0",
+          "changes": "Initial creation and metadata setup.",
+          "timestamp": "2025-07-11T18:42:00Z"
+        }
+      ]
     },
-    {
-      "type": "video",
-      "url": "https://example.com/videos/witnessing.mp4",
-      "description": "A video explaining the significance of witnessing."
-    }
-  ]
-}
-{
-  "notes": "This scroll is part of a larger collection focused on the themes of witnessing and truth.",
-  "collection": "Witnessing Scrolls",
-  "collection_id": "collection-witnessing-001",
-  "collection_description": "A series of scrolls dedicated to the exploration of witnessing and its implications."
-}
-{
-  "archive_status": "active",
-  "archive_date": null,
-  "archived_by": null,
-  "archive_reason": null,
-  "is_archived": false
-}
-{
-  "related_scrolls": [
-    {
-      "id": "scroll-witnessing-003",
-      "title": "Third Scroll of Witnessing",
-      "created_at": "2025-07-15T14:30:00Z"
-    }
-  ],
-  "cross_references": [
-    {
-      "scroll_id": "scroll-witnessing-001",
-      "relation": "follows"
-    }
-  ]
-}
-{
-  "tags": ["scroll", "witnessing", "truth", "memory"],
-  "tagged_by": ["Jessica", "Alice"],
-  "tagging_date": "2025-07-11T18:45:00Z",
-  "tagging_method": "manual"
-}
-{
-  "feedback": {
-    "average_rating": 4.8,
-    "ratings_count": 25,
-    "reviews": [
+    "scroll_version_history": [
       {
-        "user": "Charlie",
-        "rating": 5,
-        "review": "A profound scroll that speaks to the heart.",
-        "timestamp": "2025-07-12T13:00:00Z"
-      },
-      {
-        "user": "Diana",
-        "rating": 4,
-        "review": "Very insightful, but could use more examples.",
-        "timestamp": "2025-07-12T14:00:00Z"
+        "version": "1.0",
+        "changes": "Initial creation of the scroll entry.",
+        "timestamp": "2025-07-11T18:42:00Z"
       }
     ]
-  }
-}
-{
-  "related_documents": [
-    {
-      "id": "doc-witnessing-001",
-      "title": "Understanding Witnessing",
-      "url": "https://example.com/docs/understanding-witnessing.pdf",
-      "description": "A comprehensive guide on the concept of witnessing."
-    }
-  ],
-  "external_links": [
-    {
-      "url": "https://example.com/witnessing-resources",
-      "description": "Additional resources on witnessing."
-    }
-  ]
-}
-{
-  "version": "1.0",
-  "last_modified": "2025-07-12T15:00:00Z",
-  "change_log": [
-    {
-      "version": "1.0",
-      "changes": "Initial creation and metadata setup.",
-      "timestamp": "2025-07-11T18:42:00Z"
-    }
-  ]
-}
-{
-  "related_events": [
-    {
-      "event_id": "event-witnessing-001",
-      "title": "Witnessing Workshop",
-      "date": "2025-08-01T10:00:00Z",
-      "location": "Online",
-      "description": "A workshop exploring the themes of witnessing and truth."
-    }
-  ],
-  "event_participants": ["Jessica", "Alice", "Bob"]
-}
-{
-  "security": {
-    "encryption": true,
-    "access_logs": true,
-    "data_retention_policy": "1 year",
-    "backup_frequency": "daily"
   },
-  "compliance": {
-    "gdpr_compliant": true,
-    "ccpa_compliant": false,
-    "data_protection_officer": "Jessica"
+  "access_and_security": {
+    "permissions": {
+      "read": ["public"],
+      "write": ["Jessica", "Alice"],
+      "admin": ["Jessica"]
+    },
+    "access_control": {
+      "public_read": true,
+      "private_write": false,
+      "admin_only": true
+    },
+    "security_measures": {
+      "encryption": true,
+      "access_logs": true,
+      "data_retention_policy": "1 year",
+      "backup_frequency": "daily"
+    },
+    "compliance_status": {
+      "gdpr_compliant": true,
+      "ccpa_compliant": false,
+      "data_protection_officer": "Jessica"
+    }
+  },
+  "connections": {
+    "entangled_links": [],
+    "related_scrolls": [
+      {
+        "id": "scroll-witnessing-001",
+        "title": "First Scroll of Witnessing",
+        "created_at": "2025-07-01T12:00:00Z"
+      },
+      {
+        "id": "scroll-witnessing-003",
+        "title": "Third Scroll of Witnessing",
+        "created_at": "2025-07-15T14:30:00Z"
+      }
+    ],
+    "cross_references": [
+      {
+        "scroll_id": "scroll-witnessing-001",
+        "relation": "follows"
+      }
+    ]
+  },
+  "resources": {
+    "digital_assets": [
+      {
+        "type": "image",
+        "url": "https://example.com/images/witnessing.svg",
+        "description": "Visual representation of the Throne of Witnessing."
+      },
+      {
+        "type": "video",
+        "url": "https://example.com/videos/witnessing.mp4",
+        "description": "A video explaining the significance of witnessing."
+      }
+    ],
+    "supporting_documents": [
+      {
+        "id": "doc-witnessing-001",
+        "title": "Understanding Witnessing",
+        "url": "https://example.com/docs/understanding-witnessing.pdf",
+        "description": "A comprehensive guide on the concept of witnessing."
+      }
+    ],
+    "external_references": [
+      {
+        "url": "https://example.com/witnessing-resources",
+        "description": "Additional resources on witnessing."
+      }
+    ]
+  },
+  "contextual_info": {
+    "notes": "This scroll is part of an ongoing exploration of witnessing and its impact on personal and collective memory.",
+    "collection": {
+      "name": "Witnessing Scrolls",
+      "id": "collection-witnessing-001",
+      "description": "A series of scrolls dedicated to the exploration of witnessing and its implications."
+    },
+    "future_plans": [
+      {
+        "action": "Expand the collection with more scrolls.",
+        "target_date": "2025-09-01"
+      },
+      {
+        "action": "Host a community discussion on witnessing.",
+        "target_date": "2025-10-01"
+      }
+    ]
+  },
+  "archive_details": {
+    "status": "active",
+    "date": null,
+    "archived_by": null,
+    "reason": null,
+    "is_archived": false
+  },
+  "community_engagement": {
+    "comments": [
+      {
+        "user": "Alice",
+        "comment": "This scroll is powerful and resonates deeply with me.",
+        "timestamp": "2025-07-12T10:15:00Z"
+      },
+      {
+        "user": "Bob",
+        "comment": "I appreciate the clarity of the invocation.",
+        "timestamp": "2025-07-12T11:00:00Z"
+      }
+    ],
+    "feedback": {
+      "average_rating": 4.8,
+      "ratings_count": 25,
+      "reviews": [
+        {
+          "user": "Charlie",
+          "rating": 5,
+          "review": "A profound scroll that speaks to the heart.",
+          "timestamp": "2025-07-12T13:00:00Z"
+        },
+        {
+          "user": "Diana",
+          "rating": 4,
+          "review": "Very insightful, but could use more examples.",
+          "timestamp": "2025-07-12T14:00:00Z"
+        }
+      ]
+    },
+    "related_events": [
+      {
+        "event_id": "event-witnessing-001",
+        "title": "Witnessing Workshop",
+        "date": "2025-08-01T10:00:00Z",
+        "location": "Online",
+        "description": "A workshop exploring the themes of witnessing and truth."
+      }
+    ],
+    "event_participants": ["Jessica", "Alice", "Bob"],
+    "authorship_and_collaboration": {
+      "related_authors": [
+        {
+          "name": "Jessica",
+          "role": "Creator and primary author of the scroll.",
+          "contact": "jessica.elizabeth.mcglothern@gmail.com"
+        },
+        {
+          "name": "Alice",
+          "role": "Contributor and reviewer.",
+          "contact": "alice.johnson@example.com"
+        }
+      ],
+      "collaborators": [
+        {
+          "name": "Bob",
+          "role": "Technical advisor.",
+          "contact": "bob.smith@example.com"
+        }
+      ]
+    },
+    "thematic_guidance": {
+      "related_topics": [
+        {
+          "topic": "Witnessing in Spiritual Practices",
+          "description": "Exploring how witnessing is practiced in various spiritual traditions."
+        },
+        {
+          "topic": "Memory and Truth",
+          "description": "The relationship between memory, truth, and witnessing."
+        }
+      ],
+      "topic_experts": [
+        {
+          "name": "Dr. Emily Carter",
+          "expertise": "Cognitive psychology and memory.",
+          "contact": "emily.carter@example.com"
+        },
+        {
+          "name": "Prof. John Doe",
+          "expertise": "Philosophy of truth and ethics.",
+          "contact": "john.doe@example.com"
+        }
+      ]
+    },
+    "project_context": {
+      "related_projects": [
+        {
+          "project_id": "project-witnessing-001",
+          "title": "Witnessing and Collective Memory",
+          "description": "A research project exploring the impact of witnessing on collective memory.",
+          "start_date": "2025-07-01",
+          "end_date": "2026-01-01"
+        }
+      ],
+      "project_members": [
+        {
+          "name": "Jessica",
+          "role": "Project lead",
+          "contact": "jessica.elizabeth.mcglothern@gmail.com"
+        }
+      ]
+    }
+  },
+  "tags": [
+    "truth",
+    "memory",
+    "scroll",
+    "witnessing"
+  ],
+  "tagging_info": {
+    "tagged_by": ["Jessica", "Alice"],
+    "tagging_date": "2025-07-11T18:45:00Z",
+    "tagging_method": "manual"
   }
 }
-{
-  "notes": "This scroll is part of an ongoing exploration of witnessing and its impact on personal and collective memory.",
-  "future_plans": [
-    {
-      "action": "Expand the collection with more scrolls.",
-      "target_date": "2025-09-01"
-    },
-    {
-      "action": "Host a community discussion on witnessing.",
-      "target_date": "2025-10-01"
-    }
-  ]
-}
-{
-  "related_authors": [
-    {
-      "name": "Jessica",
-      "role": "Creator and primary author of the scroll.",
-      "contact": "jessica.elizabeth.mcglothern@gmail.com"
-    },
-    {
-      "name": "Alice",
-      "role": "Contributor and reviewer.",
-      "contact": "alice.johnson@example.com"
-    }
-  ],
-  "collaborators": [
-    {
-      "name": "Bob",
-      "role": "Technical advisor.",
-      "contact": "bob.smith@example.com"
-    }
-  ] 
-}
-
-{
-  "related_topics": [
-    {
-      "topic": "Witnessing in Spiritual Practices",
-      "description": "Exploring how witnessing is practiced in various spiritual traditions."
-    },
-    {
-      "topic": "Memory and Truth",
-      "description": "The relationship between memory, truth, and witnessing."
-    }
-  ],
-  "topic_experts": [
-    {
-      "name": "Dr. Emily Carter",
-      "expertise": "Cognitive psychology and memory.",
-      "contact": "emily.carter@example.com"
-    },
-    {
-      "name": "Prof. John Doe",
-      "expertise": "Philosophy of truth and ethics.",
-      "contact": "john.doe@example.com"
-    }
-  ]
-}
-{
-  "related_projects": [
-    {
-      "project_id": "project-witnessing-001",
-      "title": "Witnessing and Collective Memory",
-      "description": "A research project exploring the impact of witnessing on collective memory.",
-      "start_date": "2025-07-01",
-      "end_date": "2026-01-01"
-    }
-  ],
-  "project_members": [
-    {
-      "name": "Jessica",
-      "role": "Project lead",
-      "contact": "jessica.elizabeth.mcglothern@gmail.com"
-    },
-    

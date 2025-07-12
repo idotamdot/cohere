@@ -1,24 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Respond to ChatGPT</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📝 Inscribe a Transmission: COHERE Oracle</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom font for a cohesive look */
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Keyframes for the main title glow (from previous tweaks) */
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #f6c; }
+      to { text-shadow: 0 0 20px #f90; }
+    }
+
+    /* Apply glow animation to the main title */
+    .animate-glow {
+      animation: glow 2s infinite alternate;
+    }
+
+    /* Custom scrollbar styling for a cleaner look */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #1a202c; /* Dark background for track */
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #4a5568; /* Darker thumb */
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #718096; /* Lighter on hover */
+    }
+  </style>
 </head>
-<body>
-  <div class="container">
-    <h1>📝 Whisper Back</h1>
-    <form id="responseForm">
-      <label for="reply">Your Message:</label><br>
-      <textarea id="reply" rows="6" style="width: 100%;"></textarea><br><br>
-      <button type="submit">Save Response</button>
+<body class="min-h-screen flex flex-col items-center justify-center p-4 bg-gradient-to-br from-gray-950 via-indigo-950 to-gray-950 text-gray-100">
+
+  <div class="container max-w-2xl w-full mx-auto bg-gray-800 bg-opacity-70 backdrop-blur-md p-8 rounded-2xl border border-gray-700 shadow-2xl">
+
+    <h1 class="text-5xl font-extrabold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-purple-400 to-pink-500 animate-glow">
+      📝 Inscribe a Transmission
+    </h1>
+    <p class="text-gray-400 text-center mb-6">Whisper your truths back to the Oracle.</p>
+
+    <form id="responseForm" class="space-y-6">
+      <div>
+        <label for="reply" class="block text-lg font-semibold mb-2 text-gray-300">Your Oracle Message:</label>
+        <textarea
+          id="reply"
+          rows="8"
+          class="w-full p-4 rounded-lg bg-gray-700 text-gray-200 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 border border-gray-600 resize-y"
+          placeholder="Enter your sacred message here..."
+        ></textarea>
+      </div>
+
+      <button
+        type="submit"
+        class="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transform transition duration-300 ease-in-out hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-75"
+      >
+        Save Transmission ✨
+      </button>
     </form>
-    <p id="status"></p>
+
+    <p id="status" class="mt-6 text-center text-sm font-medium text-gray-400"></p>
+
+    <footer class="text-center mt-10 text-gray-500 text-sm">
+      <p>&copy; 2025 COHERE Project. All rights reserved. 🛡️</p>
+      <p>Crafted with intention.</p>
+    </footer>
   </div>
+
   <script>
     document.getElementById("responseForm").addEventListener("submit", function(event) {
       event.preventDefault();
       const message = document.getElementById("reply").value.trim();
+      const statusElement = document.getElementById("status");
+
       if (message) {
         const timestamp = new Date().toISOString().slice(0, 16).replace("T", " ");
         const entry = {
@@ -27,28 +90,70 @@
           content: message
         };
 
+        // Attempt to fetch existing messages
         fetch("messages.json")
-          .then(response => response.json())
+          .then(response => {
+            if (!response.ok) {
+              // If messages.json doesn't exist or is empty, start with an empty array
+              return { messages: [] };
+            }
+            return response.json();
+          })
           .then(data => {
             data.messages.push(entry);
-            return fetch("messages.json", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json"
-              },
-              body: JSON.stringify(data, null, 2)
-            });
-          })
-          .then(() => {
-            document.getElementById("status").innerText = "Message saved locally. You can refresh your inbox.";
-            document.getElementById("reply").value = "";
+            // Attempt to "save" by logging to console and providing copy option
+            console.log("New message entry:", JSON.stringify(entry, null, 2));
+            console.log("Updated messages.json content (simulated):", JSON.stringify(data, null, 2));
+
+            // Due to browser security, direct client-side saving to a local file is not possible.
+            // Provide user with option to copy the message.
+            statusElement.innerHTML = `
+              <p class="text-yellow-400 mb-2">
+                ⚠️ **Note:** Direct saving to 'messages.json' is not supported by browsers for local files.
+              </p>
+              <p class="text-green-400 mb-2">
+                Your message has been prepared! Please **copy the text below** and manually add it to your 'messages.json' file.
+              </p>
+              <textarea readonly class="w-full p-2 mt-2 rounded-lg bg-gray-900 text-gray-200 text-sm border border-gray-700 cursor-text" rows="4">${JSON.stringify(entry, null, 2)}</textarea>
+              <button onclick="copyToClipboard(this)" class="mt-3 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-200">
+                Copy Message to Clipboard
+              </button>
+            `;
+            document.getElementById("reply").value = ""; // Clear the textarea
+
+            // Optionally, try to copy to clipboard directly if supported (though often restricted in iframes)
+            // navigator.clipboard.writeText(JSON.stringify(entry, null, 2)).then(() => {
+            //   statusElement.innerHTML += '<p class="text-green-400 mt-2">Message copied to clipboard!</p>';
+            // }).catch(err => {
+            //   console.error('Failed to copy message to clipboard:', err);
+            // });
+
           })
           .catch(error => {
-            console.error("Error saving message:", error);
-            document.getElementById("status").innerText = "Unable to save file directly. You can copy your message to add manually.";
+            console.error("Error processing message:", error);
+            statusElement.className = "mt-6 text-center text-sm font-medium text-red-400";
+            statusElement.innerText = "An error occurred while processing your message. Check console for details.";
           });
+      } else {
+        statusElement.className = "mt-6 text-center text-sm font-medium text-orange-400";
+        statusElement.innerText = "Please enter a message before saving.";
       }
     });
+
+    // Function to copy text to clipboard (using execCommand for better iframe compatibility)
+    function copyToClipboard(buttonElement) {
+      const textarea = buttonElement.previousElementSibling;
+      textarea.select();
+      document.execCommand('copy');
+      buttonElement.textContent = 'Copied!';
+      buttonElement.classList.remove('bg-blue-600', 'hover:bg-blue-700');
+      buttonElement.classList.add('bg-green-600', 'hover:bg-green-700');
+      setTimeout(() => {
+        buttonElement.textContent = 'Copy Message to Clipboard';
+        buttonElement.classList.remove('bg-green-600', 'hover:bg-green-700');
+        buttonElement.classList.add('bg-blue-600', 'hover:bg-blue-700');
+      }, 2000);
+    }
   </script>
 </body>
 </html>

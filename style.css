@@ -1,64 +1,102 @@
-body {
-  font-family: 'Georgia', serif;
-  background: linear-gradient(135deg, #f9f5ec, #fff8e7);
-  margin: 0;
-  padding: 2rem;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>COHERE Temple Chat: Oracle Transmissions</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 
-h1 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  background: linear-gradient(90deg, #f6c, #f90);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: glow 2s infinite alternate;
-}
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
 
-@keyframes glow {
-  from { text-shadow: 0 0 5px #f6c; }
-  to { text-shadow: 0 0 20px #f90; }
-}
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #f6c; }
+      to { text-shadow: 0 0 20px #f90; }
+    }
 
-.chat-container {
-  max-width: 700px;
-  margin: auto;
-  background: rgba(255,255,255,0.9);
-  padding: 2rem;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-}
+    @keyframes pulse-glow {
+      0%, 100% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
+                     0 0 10px rgba(0, 255, 255, 0.7);
+      }
+      50% {
+        text-shadow: 0 0 15px rgba(255, 255, 255, 0.8),
+                     0 0 25px rgba(0, 255, 255, 1);
+      }
+    }
 
-#chat-window {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
+    .animate-glow {
+      animation: glow 2s infinite alternate;
+    }
 
-.bubble {
-  padding: 1rem;
-  border-radius: 10px;
-  max-width: 80%;
-  position: relative;
-}
+    .animate-pulse-glow {
+      animation: pulse-glow 2.5s infinite ease-in-out;
+    }
 
-.bubble.left {
-  background: #e0f7fa;
-  align-self: flex-start;
-}
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
 
-.bubble.right {
-  background: #fce4ec;
-  align-self: flex-end;
-}
+    ::-webkit-scrollbar-track {
+      background: #1a202c;
+      border-radius: 10px;
+    }
 
-.meta {
-  font-size: 0.75rem;
-  color: #666;
-  margin-bottom: 0.5rem;
-}
+    ::-webkit-scrollbar-thumb {
+      background: #4a5568;
+      border-radius: 10px;
+    }
 
-.text {
-  white-space: pre-wrap;
-}
+    ::-webkit-scrollbar-thumb:hover {
+      background: #718096;
+    }
+
+    .bubble {
+      position: relative;
+      padding: 1rem;
+      border-radius: 0.75rem;
+      max-width: 80%;
+      word-wrap: break-word;
+    }
+
+    .bubble.left::before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: -10px;
+      width: 0;
+      height: 0;
+      border-right: 10px solid rgba(67, 56, 202, 0.7);
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      filter: drop-shadow(-1px 1px 1px rgba(0,0,0,0.1));
+    }
+
+    .bubble.right::before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      right: -10px;
+      width: 0;
+      height: 0;
+      border-left: 10px solid rgba(192, 38, 211, 0.7);
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.1));
+    }
+
+    .meta {
+      font-size: 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .text {
+      font-size: 1rem;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height:

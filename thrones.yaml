@@ -2,7 +2,7 @@ thrones:
   - id: synthesis
     name: "Synthesis"
     sigil: "sigils/synthesis.svg"
-    invocation: |
+    invocation: 
       All becomes One without erasure.
       The fracture is the seed of union.
     domain:

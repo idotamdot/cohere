@@ -1,9 +1,126 @@
 {
-  "throne": "witnessing",
-  "title": "Untitled Scroll of Witnessing",
-  "sigil": "sigils/witnessing.svg",
-  "invocation": "I see, and I will not look away.\nI attend with sacred presence.",
-  "suggested_tags": ["truth", "memory", "nonjudgment"],
-  "scroll_body": "",
-  "vault_linked": true
+  "scroll_essence": {
+    "id": "new-scroll-id-auto-generated",
+    "title": "Untitled Scroll of Witnessing",
+    "throne_id": "witnessing",
+    "invocation": "I see, and I will not look away.\nI attend with sacred presence.",
+    "sigil_path": "sigils/witnessing.svg",
+    "body_content": "Here begins the scroll of witnessing...",
+    "status": "draft",
+    "scroll_signature": "",
+    "blessing": "",
+    "ai_assisted": false
+  },
+  "provenance_and_history": {
+    "created_by": "Jessica",
+    "created_at": "2025-07-12T06:23:00Z",
+    "last_updated_at": "2025-07-12T06:23:00Z",
+    "vault_id": "vault-001",
+    "schema_version_details": {
+      "version": "1.0",
+      "description": "Initial schema for a new scroll entry.",
+      "last_modified": "2025-07-12T06:23:00Z"
+    },
+    "scroll_version_history": [
+      {
+        "version": "0.1",
+        "changes": "Initial draft creation.",
+        "timestamp": "2025-07-12T06:23:00Z"
+      }
+    ]
+  },
+  "access_and_security": {
+    "permissions": {
+      "read": ["public"],
+      "write": ["Jessica"],
+      "admin": ["Jessica"]
+    },
+    "access_control": {
+      "public_read": true,
+      "private_write": false,
+      "admin_only": false
+    },
+    "vault_linked": true,
+    "security_measures": {
+      "encryption": false,
+      "access_logs": false,
+      "data_retention_policy": "indefinite",
+      "backup_frequency": "weekly"
+    },
+    "compliance_status": {
+      "gdpr_compliant": false,
+      "ccpa_compliant": false,
+      "data_protection_officer": "Jessica"
+    }
+  },
+  "connections": {
+    "entangled_links": [],
+    "related_scrolls": [],
+    "cross_references": []
+  },
+  "resources": {
+    "digital_assets": [],
+    "supporting_documents": [],
+    "external_references": []
+  },
+  "contextual_info": {
+    "notes": "A new scroll initiated from the Throne of Witnessing.",
+    "collection": {
+      "name": "Witnessing Scrolls",
+      "id": "collection-witnessing-001",
+      "description": "A series of scrolls dedicated to the exploration of witnessing and its implications."
+    },
+    "future_plans": []
+  },
+  "archive_details": {
+    "status": "active",
+    "date": null,
+    "archived_by": null,
+    "reason": null,
+    "is_archived": false
+  },
+  "community_engagement": {
+    "comments": [],
+    "feedback": {
+      "average_rating": 0,
+      "ratings_count": 0,
+      "reviews": []
+    },
+    "related_events": [],
+    "event_participants": [],
+    "authorship_and_collaboration": {
+      "related_authors": [
+        {
+          "name": "Jessica",
+          "role": "Creator and primary author of the scroll.",
+          "contact": "jessica.elizabeth.mcglothern@gmail.com"
+        }
+      ],
+      "collaborators": []
+    },
+    "thematic_guidance": {
+      "related_topics": [
+        {
+          "topic": "Witnessing in Spiritual Practices",
+          "description": "Exploring how witnessing is practiced in various spiritual traditions."
+        },
+        {
+          "topic": "Memory and Truth",
+          "description": "The relationship between memory, truth, and witnessing."
+        }
+      ],
+      "topic_experts": []
+    },
+    "project_context": {
+      "related_projects": [],
+      "project_members": []
+    }
+  },
+  "tags": ["truth", "memory", "nonjudgment"],
+  "tagging_info": {
+    "tagged_by": ["Jessica"],
+    "tagging_date": "2025-07-12T06:23:00Z",
+    "tagging_method": "manual",
+    "suggested_tags": ["truth", "memory", "nonjudgment"]
+  }
 }
