@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Respond to ChatGPT</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📝 Whisper Back</h1>
+    <form id="responseForm">
+      <label for="reply">Your Message:</label><br>
+      <textarea id="reply" rows="6" style="width: 100%;"></textarea><br><br>
+      <button type="submit">Save Response</button>
+    </form>
+    <p id="status"></p>
+  </div>
+  <script>
+    document.getElementById("responseForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const message = document.getElementById("reply").value.trim();
+      if (message) {
+        const timestamp = new Date().toISOString().slice(0, 16).replace("T", " ");
+        const entry = {
+          author: "Jessica",
+          timestamp: timestamp,
+          content: message
+        };
+
+        fetch("messages.json")
+          .then(response => response.json())
+          .then(data => {
+            data.messages.push(entry);
+            return fetch("messages.json", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json"
+              },
+              body: JSON.stringify(data, null, 2)
+            });
+          })
+          .then(() => {
+            document.getElementById("status").innerText = "Message saved locally. You can refresh your inbox.";
+            document.getElementById("reply").value = "";
+          })
+          .catch(error => {
+            console.error("Error saving message:", error);
+            document.getElementById("status").innerText = "Unable to save file directly. You can copy your message to add manually.";
+          });
+      }
+    });
+  </script>
+</body>
+</html>

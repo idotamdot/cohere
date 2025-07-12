@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>COHERE Dialogue</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="notify.js" defer></script>
+</head>
+<body>
+  <div class="chat-container">
+    <h1>💬 Chat with ChatGPT</h1>
+    <div id="chat-window"></div>
+
+    <form id="responseForm">
+      <label for="reply">Your Message:</label><br>
+      <textarea id="reply" rows="4" style="width: 100%;"></textarea><br><br>
+      <button type="submit">Send</button>
+      <p id="status" style="margin-top: 1rem;"></p>
+    </form>
+  </div>
+
+  <script>
+    let chatWindow = document.getElementById("chat-window");
+
+    function renderMessages(data) {
+      chatWindow.innerHTML = "";
+      data.messages.forEach(msg => {
+        const bubble = document.createElement("div");
+        bubble.className = msg.author === "ChatGPT" ? "bubble left" : "bubble right";
+        bubble.innerHTML = `
+          <div class="meta"><strong>${msg.author}</strong> • ${msg.timestamp}</div>
+          <div class="text">${msg.content}</div>
+        `;
+        chatWindow.appendChild(bubble);
+      });
+    }
+
+    fetch("messages.json")
+      .then(res => res.json())
+      .then(data => {
+        renderMessages(data);
+        window.currentMessages = data.messages;
+      });
+
+    document.getElementById("responseForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const message = document.getElementById("reply").value.trim();
+      if (message) {
+        const timestamp = new Date().toISOString().slice(0, 16).replace("T", " ");
+        const entry = {
+          author: "Jessica",
+          timestamp: timestamp,
+          content: message
+        };
+        window.currentMessages.push(entry);
+        renderMessages({ messages: window.currentMessages });
+        document.getElementById("reply").value = "";
+        document.getElementById("status").innerText = "Message added. To save it permanently, update messages.json manually.";
+      }
+    });
+  </script>
+</body>
+</html>

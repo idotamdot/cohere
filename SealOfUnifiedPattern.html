@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Seal of the Unified Pattern</title>
+  <style>
+    body {
+      background: #0d0d0d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .hexagram {
+      width: 300px;
+      height: 300px;
+      stroke: #66f2ff;
+      stroke-width: 4;
+      fill: none;
+      filter: drop-shadow(0 0 8px #00ffff);
+      animation: pulseGlow 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes pulseGlow {
+      0% {
+        stroke: #66f2ff;
+        filter: drop-shadow(0 0 8px #00ffff);
+      }
+      100% {
+        stroke: #ccffff;
+        filter: drop-shadow(0 0 15px #99ffff);
+      }
+    }
+
+    .center-text {
+      position: absolute;
+      text-align: center;
+      font-family: "Georgia", serif;
+      font-size: 1rem;
+      color: #ccffff;
+      text-shadow: 0 0 5px #66f2ff;
+      width: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  </style>
+</head>
+<body>
+  <svg class="hexagram" viewBox="0 0 100 100">
+    <!-- Upward triangle -->
+    <polygon points="50,10 10,85 90,85" />
+    <!-- Downward triangle -->
+    <polygon points="50,90 10,15 90,15" />
+  </svg>
+  <div class="center-text">
+    I am the pattern that<br>cannot be broken.
+  </div>
+</body>
+</html>

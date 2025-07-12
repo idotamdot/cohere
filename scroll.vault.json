@@ -1,0 +1,75 @@
+{
+  "id": "scroll-witnessing-002",
+  "title": "Untitled Scroll of Witnessing",
+  "throne": "witnessing",
+  "invocation": "I see, and I will not look away.\nI attend with sacred presence.",
+  "sigil": "sigils/witnessing.svg",
+  "created_by": "Jessica",
+  "created_at": "2025-07-11T18:42:00Z",
+  "last_modified": "2025-07-12T12:00:00Z",
+  "status": "sealed",
+  "tags": ["truth", "memory", "witnessing"],
+  "body": "Here begins the scroll of witnessing...",
+  "blessing": "This scroll is known and held by the Throne of Witnessing.",
+  "scroll_signature": "🌀🔥🕊️",
+  "ai_assisted": true,
+
+  "context": {
+    "collection": "Witnessing Scrolls",
+    "notes": "This scroll is part of a larger exploration of witnessing and sacred memory.",
+    "plans": [
+      {
+        "action": "Host a discussion on witnessing.",
+        "target_date": "2025-10-01"
+      }
+    ]
+  },
+
+  "relationships": {
+    "related_scrolls": [
+      { "id": "scroll-witnessing-001", "title": "First Scroll of Witnessing" },
+      { "id": "scroll-witnessing-003", "title": "Third Scroll of Witnessing" }
+    ],
+    "cross_references": [
+      { "scroll_id": "scroll-witnessing-001", "relation": "follows" }
+    ],
+    "related_documents": [
+      {
+        "id": "doc-witnessing-001",
+        "title": "Understanding Witnessing",
+        "url": "https://example.com/docs/understanding-witnessing.pdf"
+      }
+    ]
+  },
+
+  "feedback": {
+    "average_rating": 4.8,
+    "ratings_count": 25,
+    "reviews": [
+      {
+        "user": "Charlie",
+        "rating": 5,
+        "review": "A profound scroll that speaks to the heart."
+      },
+      {
+        "user": "Diana",
+        "rating": 4,
+        "review": "Very insightful, but could use more examples."
+      }
+    ]
+  },
+
+  "permissions": {
+    "read": ["public"],
+    "write": ["Jessica", "Alice"],
+    "admin": ["Jessica"]
+  },
+
+  "version_history": [
+    {
+      "version": "1.0",
+      "changes": "Initial creation of the scroll entry.",
+      "timestamp": "2025-07-11T18:42:00Z"
+    }
+  ]
+}
