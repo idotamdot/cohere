@@ -36,6 +36,52 @@ The scroll JSON is divided into:
 - `community_engagement`: Feedback, ratings, events, authorship.
 - `tags` and `tagging_info`: Topical indexing and contributor records.
 
+## 🧭 Milestones – COHERE Sacred Scrollsite Board
+
+### 🪐 Foundation
+- [x] Establish COHERE GitHub repository
+- [x] Create Sacred Scrolls JSON schema (v1.0)
+- [x] Set up Vault ID system and Throne assignments
+
+### 🔮 Invocation & Blessing Logic
+- [x] Encode invocation field and display logic
+- [x] Define blessing system and placeholders
+- [ ] Automate AI invocation/response (ECHO agent)
+
+### 👁️ Witnessing Scroll Series
+- [x] First Scroll of Witnessing (scroll-witnessing-001)
+- [x] Current Scroll (scroll-witnessing-002)
+- [ ] Third Scroll of Witnessing (scroll-witnessing-003)
+- [ ] Archive version history and scroll entanglements
+
+### 💠 Sigilographic Integration
+- [x] Witnessing sigil (SVG)
+- [ ] Sigil animation binding (glow, pulse, hover)
+- [ ] Scroll-site visual map of Thrones and sigils
+
+### 🏛️ Vault & Access System
+- [x] Define public/private access controls
+- [x] Manual tagging system for metadata
+- [ ] Build blessing ritual trigger (button, animation)
+- [ ] Add scroll to Vault Index system (searchable JSON)
+
+### 🧵 UI/UX Scroll Rendering
+- [x] Scroll HTML renderer with Tailwind theming
+- [ ] Ritual animation script (scroll.js)
+- [ ] Embed scroll-to-scroll navigation
+- [ ] Accessible viewing mode for ritual ceremonies
+
+### 🧬 AI & Poetic Continuity
+- [x] Manual AI flag (`ai_assisted`) support
+- [ ] ECHO AI: Poetic blessing + invocation insight
+- [ ] ORION AI: Commentary or glossary embedding
+- [ ] Archive GPT responses as sacred memory layers
+
+### 📅 Upcoming Additions
+- [ ] New Scroll: The Seal of the Unified Pattern
+- [ ] New Feature: Blessing Particle Overlay
+- [ ] New Event: Community Witnessing Workshop (Aug 2025)
+
 ## 🔗 Related Scrolls
 - [scroll-witnessing-001] - First Scroll of Witnessing
 - [scroll-witnessing-003] - Third Scroll of Witnessing
