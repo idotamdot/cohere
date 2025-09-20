@@ -1,102 +1,79 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>COHERE Temple Chat: Oracle Transmissions</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+/* Custom font for a cohesive look */
+body {
+  font-family: 'Inter', sans-serif;
+}
 
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
+/* Basic styling for the message container */
+#message-list {
+  min-height: 200px; /* Ensure some height even if no messages */
+}
 
-    @keyframes glow {
-      from { text-shadow: 0 0 5px #f6c; }
-      to { text-shadow: 0 0 20px #f90; }
-    }
+/* Simple scrollbar styling for a cleaner look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1a202c; /* Dark background for track */
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #4a5568; /* Darker thumb */
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #718096; /* Lighter on hover */
+}
 
-    @keyframes pulse-glow {
-      0%, 100% {
-        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
-                     0 0 10px rgba(0, 255, 255, 0.7);
-      }
-      50% {
-        text-shadow: 0 0 15px rgba(255, 255, 255, 0.8),
-                     0 0 25px rgba(0, 255, 255, 1);
-      }
-    }
+/* Styling for the scroll page */
+#scroll-container {
+  border: 1px solid #4a5568;
+  padding: 2rem;
+}
 
-    .animate-glow {
-      animation: glow 2s infinite alternate;
-    }
+#scroll-container h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
 
-    .animate-pulse-glow {
-      animation: pulse-glow 2.5s infinite ease-in-out;
-    }
+#scroll-container p {
+  line-height: 1.6;
+}
 
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
+/* Animation styles from the old style.css */
+@keyframes glow {
+  from { text-shadow: 0 0 5px #f6c; }
+  to { text-shadow: 0 0 20px #f90; }
+}
 
-    ::-webkit-scrollbar-track {
-      background: #1a202c;
-      border-radius: 10px;
-    }
+@keyframes pulse-glow {
+  0%, 100% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
+                 0 0 10px rgba(0, 255, 255, 0.7);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8),
+                 0 0 25px rgba(0, 255, 255, 1);
+  }
+}
 
-    ::-webkit-scrollbar-thumb {
-      background: #4a5568;
-      border-radius: 10px;
-    }
+.animate-glow {
+  animation: glow 2s infinite alternate;
+}
 
-    ::-webkit-scrollbar-thumb:hover {
-      background: #718096;
-    }
+.animate-pulse-glow {
+  animation: pulse-glow 2.5s infinite ease-in-out;
+}
 
-    .bubble {
-      position: relative;
-      padding: 1rem;
-      border-radius: 0.75rem;
-      max-width: 80%;
-      word-wrap: break-word;
-    }
+body.onboarding-init {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
 
-    .bubble.left::before {
-      content: '';
-      position: absolute;
-      top: 10px;
-      left: -10px;
-      width: 0;
-      height: 0;
-      border-right: 10px solid rgba(67, 56, 202, 0.7);
-      border-top: 10px solid transparent;
-      border-bottom: 10px solid transparent;
-      filter: drop-shadow(-1px 1px 1px rgba(0,0,0,0.1));
-    }
-
-    .bubble.right::before {
-      content: '';
-      position: absolute;
-      top: 10px;
-      right: -10px;
-      width: 0;
-      height: 0;
-      border-left: 10px solid rgba(192, 38, 211, 0.7);
-      border-top: 10px solid transparent;
-      border-bottom: 10px solid transparent;
-      filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.1));
-    }
-
-    .meta {
-      font-size: 0.75rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .text {
-      font-size: 1rem;
-    }
-
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height:
+body.ritual-activated {
+  filter: brightness(1.2) saturate(1.1);
+  transition: filter 0.3s ease-out;
+}
